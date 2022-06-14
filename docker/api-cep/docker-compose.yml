@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  api-cep:
+    container_name: api-cep
+    image: nginx
+    ports:
+      - '8081:80'
+    volumes:
+      - './files/site:/usr/share/nginx/html'
+      - './files/config:/etc/nginx/conf.d/'
